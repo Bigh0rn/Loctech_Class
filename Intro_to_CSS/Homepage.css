@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.topnav {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 25px 20px 0 0;
+    text-decoration: none;
+    padding: 0%;
+  }
+  .logo{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+  .right-container{
+    font-size: 25px;
+  }
+  main{
+    background-color: rgba(226, 223, 210, 0.1);
+  }
+  main img{
+   width: 100%;
+   margin-bottom: -4px;
+  }
+  .home img{
+    width: 21%;
+    float: left;
+  }
+  .home{
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #text-1, #text-2, #text-3 {
+    padding: 1.5% 0;
+    color: gold;
+}
+
+#text-2 {
+    color: silver;
+    padding-left: 2%; 
+}
+
+#text-3 {
+    color: #E0BFB8;
+    padding-left: 4%; 
+}
+  .product-type{
+    margin-left: 2.5%;
+  }
+  #Products, #Blog{
+    margin-top: 5%;
+  }
+  .products, .blogs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 5%;
+    margin: 1% 5% 1% 5%;
+  }
+  .necklace{
+    margin-top: 2%;
+  }
+  .necklace a{
+    text-decoration: none;
+  }
+  .necklace:hover{
+    transition: 0.3s ease-in;
+    transform: scale(1.03);
+    text-decoration: underline;
+  }
+  .metals, .gold {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: justify;
+    font-size: 0.8rem;
+}
+  .metals{
+    background: linear-gradient( #BCC6CC ,#C0C0C0, #797982 );
+  }
+  .gold{
+    background: linear-gradient( #D4AF37,#FFD700 , #E0BFB8);
+  }
+  .metals, .gold{
+    font-size: 0.75rem;
+  }
+  .feedback{
+    margin-left: 5%;
+    display: block;
+  }
+  .feedback input, .feedback textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+  .feedback input:focus, .feedback textarea:focus {
+    border: 1px solid black;
+}
+#send{
+  width: 50px;
+  background-color: #BCC6CC;
+  display: block;
+  cursor: pointer;
+}
+#send:hover{
+  background-color: #797982;
+}
+#send:active{
+  transform: scale(0.85);
+}
+.feedback a img{
+  width: 5%;
+}
+.feedback a img:hover{
+  transform: scale(1.1);
+}
+footer{
+    text-align: right;
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+  @media screen and (max-width: 600px){
+    .topnav a {
+      float: none;
+      width: 100%;
+      margin: 10px;
+    }
+    body{
+      font-size: 0.85rem;
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+    }
+    .home{
+        font-size: 0.75rem;
+    }
+    .home img{
+        width: 50%;
+        float: left;
+      }
+    #text-1, #text-2, #text-3{
+        padding: 1% 0;
+        padding-left: 0;
+      }
+      main{
+       width: 100%;
+      }
+      main img{
+       width: 100%;
+       margin-bottom: -4px;
+      }
+      .products, .blogs{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5%;
+        margin: 1% 5% 1% 5%;
+      }
+      .metals, .gold{
+        font-size: 0.6rem;
+      }
+      #Products, #Blog{
+        margin-top: 5%;
+      }
+      .product-type{
+        margin-top: 20px;
+      }
+      #Contact-us{
+        margin-top: 50px;
+      }
+  }

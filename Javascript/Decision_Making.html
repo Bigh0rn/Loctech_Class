@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 5
+        let b = 10
+        console.log(a<b)
+        console.log(a==b)
+        console.log(b<a)
+        console.log(a!=b)
+        let value = "truth";  // Falsy
+        if (value) {
+        console.log("This will not print because value is falsy");
+        }
+        let isLoggedIn = true
+        let hasPermissions = false
+        console.log(isLoggedIn && hasPermissions)
+        console.log(isLoggedIn || hasPermissions)
+        console.log(!isLoggedIn)
+        // let age = 25;
+        // if (age >= 18) {
+        //     console.log("You are an adult");
+        // } else {
+        //     console.log("You are a minor");
+        // }
+        let score = 70;
+
+            if (score >= 70) {
+                console.log("Grade: A");
+            } else if (score >= 60) {
+                console.log("Grade: B");
+            } else if (score >= 50) {
+                console.log("Grade: C");
+            } else if (score >= 45) {
+                console.log("Grade: D");
+            } else if (score >= 40) {
+                console.log("Grade: E");
+            }else {
+                console.log("Grade: F");
+            }
+        let age = 17;
+        let hasID = false;
+
+        if (age >= 18) {
+            if (hasID) {
+            console.log("You can enter");
+            } else {
+            console.log("ID required to enter");
+            }
+        } else {
+            console.log("You are not allowed to enter");
+        }
+        let message = age >= 18 ? "You are an adult" : "You are a minor";
+        console.log(message);
+    </script>
+</body>
+</html>

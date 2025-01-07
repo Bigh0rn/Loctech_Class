@@ -1,0 +1,15 @@
+body {
+background-image: url(./cubes.jpg);
+background-size: auto;
+color: blueviolet;
+}
+.box {
+    width: 20%;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px indianred;
+}
+p{
+    text-shadow: 5px 5px 5px aqua;
+}

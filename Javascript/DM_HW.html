@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert('Welcome!')
+        let number = prompt('Please input a number')
+        if(number > 0) {alert('Your number is a positive number')}
+        if(number < 0) {alert('Your number is Negative')}
+        if(number ==0){alert('Your number is zero')}
+    </script>
+    <script>
+        {alert('Checkout our calculator')
+        let num1 = prompt('Enter the first number;')
+        let num2 = prompt('Enter the second number:')
+        let operations = prompt('Enter a function (+, -, *, /)') 
+        let result = operations === '+' ? num1 + num2:
+        operations === '-' ? num1 - num2:
+        operations === '*' ? num1 * num2:
+        operations === '/' ? num2 !== 0 ? num1/num2: 'Error: Division by zero': 'Error: Invald operation';
+        console.log(result)}
+    </script>
+</body>
+</html>

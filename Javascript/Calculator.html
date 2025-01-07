@@ -1,0 +1,225 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple Calculator</h1>
+  <div>
+    <input id="num1" type="number" placeholder="Enter first number">
+    <input id="num2" type="number" placeholder="Enter second number">
+  </div>
+  <div>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+  </div>
+  <div class="output" id="result"></div>
+
+  <script>
+    function calculate(operator) {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      let result;
+
+      if (isNaN(num1) || isNaN(num2)) {
+        result = "Please enter valid numbers!";
+      } else {
+        switch (operator) {
+          case '+':
+            result = num1 + num2;
+            break;
+          case '-':
+            result = num1 - num2;
+            break;
+          case '*':
+            result = num1 * num2;
+            break;
+          case '/':
+            result = num2 !== 0 ? num1 / num2 : "Cannot divide by zero!";
+            break;
+          default:
+            result = "Invalid operation!";
+        }
+      }
+
+      document.getElementById('result').textContent = `Result: ${result}`;
+    }
+  </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standard Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .calculator {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      padding: 20px;
+    }
+    .display {
+      width: 100%;
+      height: 50px;
+      font-size: 24px;
+      text-align: right;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .button {
+      padding: 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background: #007BFF;
+      color: #fff;
+      cursor: pointer;
+      text-align: center;
+    }
+    .button:active {
+      background: #0056b3;
+    }
+    .button.operation {
+      background: #28a745;
+    }
+    .button.clear {
+      background: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" class="display" disabled placeholder="0">
+    <div class="buttons">
+      <button class="button" onclick="appendNumber('7')">7</button>
+      <button class="button" onclick="appendNumber('8')">8</button>
+      <button class="button" onclick="appendNumber('9')">9</button>
+      <button class="button operation" onclick="setOperation('/')">÷</button>
+
+      <button class="button" onclick="appendNumber('4')">4</button>
+      <button class="button" onclick="appendNumber('5')">5</button>
+      <button class="button" onclick="appendNumber('6')">6</button>
+      <button class="button operation" onclick="setOperation('*')">×</button>
+
+      <button class="button" onclick="appendNumber('1')">1</button>
+      <button class="button" onclick="appendNumber('2')">2</button>
+      <button class="button" onclick="appendNumber('3')">3</button>
+      <button class="button operation" onclick="setOperation('-')">−</button>
+
+      <button class="button" onclick="appendNumber('0')">0</button>
+      <button class="button" onclick="appendNumber('.')">.</button>
+      <button class="button clear" onclick="clearDisplay()">C</button>
+      <button class="button operation" onclick="setOperation('+')">+</button>
+
+      <button class="button" style="grid-column: span 4;" onclick="calculateResult()">=</button>
+    </div>
+  </div>
+
+  <script>
+    let displayValue = '';
+    let firstOperand = null;
+    let currentOperation = null;
+
+    function appendNumber(number) {
+      if (displayValue === '0' && number !== '.') {
+        displayValue = number;
+      } else {
+        displayValue += number;
+      }
+      updateDisplay();
+    }
+
+    function setOperation(operation) {
+      if (currentOperation !== null) {
+        calculateResult();
+      }
+      firstOperand = parseFloat(displayValue);
+      currentOperation = operation;
+      displayValue = '';
+    }
+
+    function calculateResult() {
+      if (currentOperation === null || displayValue === '') return;
+
+      const secondOperand = parseFloat(displayValue);
+      let result;
+
+      switch (currentOperation) {
+        case '+':
+          result = firstOperand + secondOperand;
+          break;
+        case '-':
+          result = firstOperand - secondOperand;
+          break;
+        case '*':
+          result = firstOperand * secondOperand;
+          break;
+        case '/':
+          result = secondOperand !== 0 ? firstOperand / secondOperand : 'Error';
+          break;
+        default:
+          return;
+      }
+
+      displayValue = result.toString();
+      currentOperation = null;
+      firstOperand = null;
+      updateDisplay();
+    }
+
+    function clearDisplay() {
+      displayValue = '';
+      firstOperand = null;
+      currentOperation = null;
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      const display = document.getElementById('display');
+      display.value = displayValue || '0';
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+* {
+    background-color: black;
+    align-items: center;
+}
+input {
+    background-color: black;
+    border-color: yellow;
+    border-width: 1px;
+    color: yellow;
+}
+textarea{
+    background-color: black;
+    border-width: 1px;
+    border-color: yellow;
+    color: white;
+}
+label {
+     color: yellow;
+     font-size: px;
+}
+p{
+    color: yellow;
+}
+.form {
+    border: 2px solid yellow;
+    width: 300px;
+    align-items: center;
+    align-content: center;
+}
+h3{
+    margin: 0;
+    background-color: yellow;
+}
+input[type="button"]:hover, button:hover {
+    background-color: blueviolet;
+}
+input[type="button"]{width: 170px;}

@@ -1,0 +1,39 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+    grid-gap: 10px;
+ }
+ 
+ .grid-item {
+    padding: 20px;
+    text-align: justify;
+ }
+ #grid_1{
+    background-color: brown;
+ }
+ #grid_2 {
+    background-color: blanchedalmond;
+ }
+ #grid_3 {
+    background-color:bisque;
+ }
+ #grid_4 {
+    background-color:burlywood;
+ }
+ .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ .flex-item {
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 10px;
+ }
+ nav{
+   background-color: lightcoral;
+   padding: 20px;
+   margin: 0px;
+   border: opx;
+ }

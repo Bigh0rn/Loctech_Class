@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Page</title>
+</head>
+<body>
+    <h1>Application Page</h1>
+    <p>Please input your details</p>
+    <form action="" id="Apply_btn">
+        <label for="name">Name</label><br>
+        <input type="text" name="name" placeholder="Name" required><br><br>
+        
+        <label for="email">Email</label><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        
+        <label for="address">Address</label><br>
+        <textarea name="address" rows="3" cols="40" required></textarea><br><br>
+        
+        <label for="">Gender</label><br>
+        <input type="radio" name="gender" id="" value="" required>
+        <label for="">Male</label><br>
+        <input type="radio" name="gender" id="" value="" required>
+        <label for="">Female</label><br>
+        <br>
+        <select name="" id="" required>
+            <option value="" disabled selected>Job Positions</option>
+            <option value="">Manager</option>
+            <option value="">Supervisor</option>
+            <option value="">Auditor</option>
+            <option value="">HR Manager</option>
+        </select><br>
+        <br>
+        <label for="">Date available to start</label><br>
+        <input type="date" name="Date" required><br>
+        <br>
+        <input type="submit" value="Apply"><br>
+        <br>
+    </form>
+
+    <script>
+        document.getElementById('Apply_btn').onsubmit = function()  {
+            alert('Application Received');
+        };
+    </script>
+</body>
+</html>

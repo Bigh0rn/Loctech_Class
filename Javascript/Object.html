@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const student = {
+            Firstname: 'Deji',
+            Lastname: 'Rotifa',
+            Age: 26,
+            Major: 'Geology'
+        }
+        console.log(student.Age)
+        console.log(student)
+
+
+        const Car = {
+            make: 'Mercedes-Benz',
+            model: 'W123',
+            year: 1975,
+            color: 'yellow'
+        }
+
+        Car.color = 'green'
+        Car.Milage = 45,559
+
+        console.log(Car.model)
+        console.log(Car.year)
+
+
+        const library= {
+            book: [
+                {
+                    Title: 'Hamlet',
+                    author: 'William Shakespeare',
+                    yearPublished: 1623
+                },
+                {
+                    Title: 'The Trials of Brother Jero',
+                    author: 'Wole Soyinka',
+                    yearPublished: 1963
+                },
+                {
+                    Title: 'Julius Caesar',
+                    author: 'William Shakespeare',
+                    yearPublished: 1599
+                },
+                {
+                    Title: 'Things Fall Apart',
+                    author: 'Chinua Achebe',
+                    yearPublished: 1958
+                },
+                {
+                    Title: 'Romeo and Juliet',
+                    author: 'William Shakespeare',
+                    yearPublished: 1597
+                },
+                {
+                    Title: 'Half of a Yellow Sun',
+                    author: ' Chimamanda Ngozi Adichie',
+                    yearPublished: 2006
+                },
+                {
+                    Title: 'Othello',
+                    author: 'William Shakespeare',
+                    yearPublished: 1603
+                },
+                {
+                    Title: 'The Man Died',
+                    author: 'Wole Soyinka',
+                    yearPublished: 1971
+                },
+            ]
+        }
+        console.log(library.book[1].Title)
+
+
+        const school = {
+            classes: [
+                {
+                    subject: 'Computer Science',
+                    roomNumber: 208,
+                    students: ['Noah', 'Oliver', 'James', 'Henry', 'Sophia']
+                },
+                {
+                    subject: 'Geography',
+                    roomNumber: 215,
+                    students: ['Janet', 'Olivia', 'Anabella', 'Theophilus', 'William']
+                }
+            ]
+        }
+        console.log(school.classes[0].students)
+    </script>
+</body>
+</html>

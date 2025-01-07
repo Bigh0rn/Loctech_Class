@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = []
+        console.log(arr)
+
+        let arr2 = Array()
+        console.log(arr2)
+
+        const countries =["United State", "Nigeria", "Jamaica", "Germany", "Congo", "Ghana"]
+        console.log(countries, countries.length)
+        console.log(countries[0].length)
+        const arr3 = [
+            'Loctech',
+            677,
+            true,
+            {skills: ['HTML', 'CSS', 'JS', 'React', 'Python', {car: 'BMW', color:'red', year:2025}]}
+        ]
+        console.log(arr3)
+        console.log(arr3[3].skills[2])
+        console.log(arr3[3].skills[5].year)
+        
+
+        let js = 'Javascript'
+        console.log(js.split(''))
+
+        let companiesstr = 'Facebook, Walmart, Shell, Exxonmobil, Dangote, Bua, Netflix, Google'
+        let companies = companiesstr.split(',')
+        console.log(companiesstr)
+        console.log(companies)
+
+        let txt = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python'
+        const words = txt.split(' ')
+        console.log(words)
+        console.log(words[3])
+        console.log(words[6])
+        console.log(words[9])
+
+        const fruits = ['banana', 'orange', 'mango', 'lemon', 'beetroot', 'pineapple']
+        let firstFruit = fruits[0]
+        console.log(firstFruit)
+
+        let lastIndex = fruits.length - 1
+        let lastFruit = fruits[lastIndex]
+        console.log(lastFruit)
+        fruits[lastIndex] = 'Pawpaw'
+        console.log(fruits)
+
+
+        const eightEmptyValues = Array(9).fill('static')
+        console.log(eightEmptyValues)
+
+        const firstList = [1,2,3,'...']
+        const secondList = [4,5,6]
+        const thirdList = firstList.concat(secondList)
+        console.log(thirdList)
+        console.log(thirdList.indexOf('...'))
+
+        let searchList = thirdList.indexOf(5)
+        if (searchList != -1){
+            console.log(`This number exists: ${thirdList[searchList]}`)
+        } else{
+            console.log('This number is not in the list')
+        }
+        const webTechs = [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Redux',
+            'Node',
+            'MongoDB',
+        ]
+
+        console.log(webTechs.includes('Node'))
+        console.log(webTechs.includes('C'))
+
+        let numbers = [1,3,4, 5, 6, 7, 8, 9, 10]
+        let checkarray =  (Array.isArray(numbers))? `This is an array: ${numbers}`: `This is not an array`; 
+        console.log(checkarray)
+
+        const names = ['David', 'Deji', 'Samuel', 'Seun']
+        console.log(names)
+        console.log(names.toString())
+        // console.log(names.join(', '))
+        // console.log(names.slice(2))
+        // console.log(names.splice(3))
+        names.push('Stephen')
+        console.log(names)
+        names.reverse()
+        console.log(names)
+        names.sort()
+        console.log(names)  
+
+        let tasks = ['Meditate', 'Drink water', 'Yoga', 'Listen to podcasts']
+        console.log(tasks)
+        tasks.push('Read books', 'Watch netflix')
+        console.log(tasks)
+        tasks.pop()
+        console.log(tasks)
+
+        let friends = ['Anosi', 'Tweety', 'Soultee', 'Pepe', 'Dray']
+        console.log(friends)
+        console.log(friends.indexOf('Dray'))
+        let search = friends.includes('seun')
+        if (search != false) console.log(`${search} is on the list`)
+        else console.log('The name is not on the list')
+
+        const classGroup = [
+            ['Lugard', 'David'],
+            ['Seun', 'Deji'],
+            ['Samuel', 'Prince'],
+            ['Favour', 'Blessing'],
+            ['Bright', 'Queen']
+        ]
+        console.log(classGroup)
+        classGroup.push(['Stephen', 'Samson'])
+        console.log(classGroup)
+        console.log(classGroup[5][1])
+        classGroup[3].splice(0,1, 'Daniel')
+        console.log(classGroup)
+     </script>
+</body>
+</html
